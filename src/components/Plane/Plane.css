@@ -1,0 +1,11 @@
+.plane {
+	--plane-gap: 10px;
+	--plane-arrow-size: var(--arrow-size, 50px);
+	--plane-arrows: 3;
+
+	display: grid;
+	width: calc((var(--plane-arrow-size) * var(--plane-arrows)) + (var(--plane-gap) * (var(--plane-arrows) - 1)));
+	grid-template-columns: repeat(var(--plane-arrows), var(--plane-arrow-size));
+	grid-template-rows: repeat(var(--plane-arrows), var(--plane-arrow-size));
+	gap: var(--plane-gap);
+}
